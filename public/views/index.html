@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sergi" ng-controller="MainCtrl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>Sergi</title>
+
+	<!-- angular -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="scripts/app.js"></script>
+</head>
+<body >
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="...">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+  </div>
+	<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>Classes near you list</p>
+
+        {{test}}
+
+      </div>
+      <div class="col-md-6">
+        
+         <div ng-class="leftColumn">
+            <p>Teach a Class Button</p>
+        </div>
+
+        <div ng-class="rightColumn" >
+             This is where the form will appear
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- bootstrap css -->
-  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/styleindex.css">
 
 	<title>Sergi</title>
 
@@ -14,6 +15,7 @@
 
   <!-- custom script -->
   <script type="text/javascript" src="scripts/app.js"></script>
+
 </head>
 <body >
   <nav class="navbar navbar-default">
@@ -26,6 +28,7 @@
     </div>
   </nav>
   <div class="jumbotron">
+
   </div>
 	<div class="container">
     <div class="row">
@@ -35,14 +38,16 @@
         {{test}}
 
       </div>
-      <div class="col-md-6">
-        
-         <div ng-class="leftColumn">
-            <p>Teach a Class Button</p>
-        </div>
+      <div class="col-md-6" >
+        <a href="" ng-click="showme=true">Signup to be an instructor!</a> 
+      <div class="wrapper">
+        <div ng-controller="TeacherSignupCtrl">
+          <h2 ng-show="showme"><div ng-include="'views/templates/signup.html'"></h2>
 
-        <div ng-class="rightColumn" >
-             This is where the form will appear
+        </div>
+      </div>
+  
+</div>    
         </div>
       </div>
     </div>

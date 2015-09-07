@@ -1,5 +1,18 @@
 var express = require('express');
 var app = express();
+bodyParser = require('body-parser'),  // for data from the request body
+mongoose = require('mongoose');       // to interact with our db
+User = require("./models/user");
+
+// connect to mongodb
+mongoose.connect(
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/sergi'
+);
+
+// configure body-parser
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 // serve js and css files from public folder

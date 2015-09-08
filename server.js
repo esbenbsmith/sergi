@@ -17,7 +17,7 @@ mongoose.connect(
 
 // configure body-parser
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyparser.json());
+
 
 // serve js and css files from public folder
 app.use(express.static(__dirname + "/public"));

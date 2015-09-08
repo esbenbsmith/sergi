@@ -10,3 +10,4 @@ app.controller('TeacherSignupCtrl', ['$scope', function ($scope) {
 
  		
 }]);
+

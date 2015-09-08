@@ -3,14 +3,12 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
+// set up a mongoose model and pass it using module.exports
+module.exports = mongoose.model('User', new Schema({ 
   firstname: String,
   lastname: String,
   location: String,
   language: String,
-  email: String
-});
-
-var User = mongoose.model('User', UserSchema);
-
-module.exports = User;
+  email: String, 
+  password: String
+}));

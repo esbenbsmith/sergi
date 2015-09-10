@@ -25,47 +25,97 @@
             <div class="row">
             
            
-              
-               <ul class="nav navbar-nav navbar-right" id="nav-links">
-                <li><a id="about" href="/about">
-                  About
-                </a></li>
-              
-                <li><a href=""  id="signup">Sign Up</a></li>
-                <li><a href="#"  id="login">Login</a></li>
+              <a href="/"><img  src="http://i51.photobucket.com/albums/f364/esbenbsmith/mustache2_zpslld7oa7y.jpg" border="0" alt="sergilogo"/></a>
+
+               <ul class="nav navbar-nav navbar-right" id="nav-links">              
+                <li><a href="" ng-click="signup=true"  >Sign Up</a></li>
+                <li><a href="#"  ng-click="login=true" >Login</a></li>
                        
               </ul>
               
             </div>
           </div>
-    </nav>
+  </nav>
 
 
 
-  <div class="jumbotron">
+<div class="jumbotron">  
+  <div class="container">
+    <div class="layer">
+      <div class="row">
+          <div class="col-md-offset-1 col-md-7">
+              <div id="jumbocontent">
+                <h1>Making Food Personal Again</h1>
 
-  </div>
-	<div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <p>Classes near you list</p>
+              <img src="http://i51.photobucket.com/albums/f364/esbenbsmith/circle_zpsqftupfrc.png" border="0" alt="circle"/>
+            
+                
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div ng-hide="signup" ng-include="'views/templates/login.html'"></div>
+            <div ng-show="signup">
+              <div  ng-include="'views/templates/signup.html'"></div>
+            </div>
+                      
+          </div>
 
-        {{test}}
-
-      </div>
-      <div class="col-md-6" >
-        <a href="" ng-click="showme=true">Signup to be an instructor!</a> 
-      <div class="wrapper">
-        <div ng-controller="TeacherSignupCtrl">
-          <h2 ng-show="showme"><div ng-include="'views/templates/signup.html'"></h2>
-
-        </div>
-      </div>
-  
-</div>    
         </div>
       </div>
     </div>
   </div>
+</div>
+
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">        
+        <div ng-show="whatis">
+          <button class="btn btn-default" ng-click="whatis=false">hide</button>
+          <br>
+          <h2>Cooking Classes</h2>
+          <h3>Steps from your location</h3>
+          <ul>
+            <li> Less than 1 mile away </li> 
+            <li> Less than 1 hour per class </li>          
+            <li> A nice homemade dinner </li>
+          </ul>
+          <p> Sergi was created for the busy people, who care about the quality of their food, but also need inspiration for when they are less busy</p>
+        </div>
+      <a href="" ng-click="whatis=true">
+          <img ng-hide="whatis" src="http://i51.photobucket.com/albums/f364/esbenbsmith/whatis_zpsvekn6veo.jpg" border="0" alt="whatis"/></a>
+
+    </div>
+
+    <div class="col-md-4">
+      
+        
+        <div ng-show="show">
+          <button class="btn btn-default" ng-click="show=false">hide</button>
+       
+        <br>
+        </div>
+        <a href="" ng-click="show=true">
+        <img ng-hide="show" src="http://i51.photobucket.com/albums/f364/esbenbsmith/find_zps7pnpp1p8.jpg" border="0" alt="join"/></a>
+
+    </div>
+    <div class="col-md-4" >
+      
+        
+        <div ng-show="showme">
+          <button class="btn btn-default" ng-click="showme=false">hide</button>
+          <center><h3>Step 1 of 2</h3><h4> Profile Form</h4></center>
+          <div ng-include="'views/templates/signup.html'">
+            <br>
+            <br>
+          </div>
+        </div>
+
+          <a href="" ng-click="showme=true">
+          <img ng-hide="showme" src="http://i51.photobucket.com/albums/f364/esbenbsmith/join_zpslgpiwsk7.jpg" border="0" alt="join"/></a>
+        
+    </div>
+  </div>
+</div>
 </body>
 </html>

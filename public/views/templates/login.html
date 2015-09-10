@@ -1,0 +1,21 @@
+<head>
+    <!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/superhero/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/styleindex.css">
+</head>
+
+<div id="login" class="login center-block">
+  <h3>Login</h3>
+  <form role="form">
+  <div class="form-group">
+    
+    <input type="text" class="form-control" ng-model="user.email" id="email" placeholder="E-mail">
+  </div>
+  <div class="form-group">
+    
+    <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
+</form>
+
+</div>

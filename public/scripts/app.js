@@ -1,13 +1,23 @@
-var app = angular.module('sergi', []);
+var app = angular.module('sergi', [
+		
+	]);
 
 app.controller('MainCtrl', ['$scope', function ($scope) {
 
   $scope.test = 'Hello world!'
 }]);
 
+app.controller('SignupCtrl', ['$scope', 'User', '$state', function ($scope, User, $state){
+	
+	$scope.newUser={};
 
-app.controller('TeacherSignupCtrl', ['$scope', function ($scope) {
+	$scope.createUser = function () {
+		User.register($scope.newUser).then(function(user){
+			$state.go('app.profile');
 
- 		
-}]);
+		}, function(err){
+			$scope.error = err;
+		})
+	}
 
+}])
